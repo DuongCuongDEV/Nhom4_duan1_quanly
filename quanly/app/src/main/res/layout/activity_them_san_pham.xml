@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ThemSanPham">
+
+
+    <ImageButton
+        android:id="@+id/imageview"
+        android:layout_width="match_parent"
+        android:layout_height="300dp" />
+
+    <EditText
+        android:id="@+id/txtName"
+        android:layout_width="302dp"
+        android:hint="Name"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+    <EditText
+        android:id="@+id/txtGiaCu"
+        android:layout_width="302dp"
+        android:hint="Giá cũ"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+    <EditText
+        android:id="@+id/txtGiaMoi"
+        android:layout_width="302dp"
+        android:hint="Giá mới"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+    <EditText
+        android:id="@+id/txtMoTa"
+        android:layout_width="302dp"
+        android:hint="Mô tả"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+    <EditText
+        android:id="@+id/txtMaLoai"
+        android:layout_width="302dp"
+        android:hint="Loai"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <Button
+            android:id="@+id/btnupload"
+            android:layout_width="194dp"
+            android:layout_height="61dp"
+            android:text="Upload" />
+        <Button
+            android:id="@+id/show"
+            android:layout_width="194dp"
+            android:layout_height="61dp"
+            android:text="Show" />
+    </LinearLayout>
+
+
+</LinearLayout>

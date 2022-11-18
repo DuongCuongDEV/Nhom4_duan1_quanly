@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#009688"
+    tools:context=".Home">
+
+    <ImageView
+        android:id="@+id/anhNen"
+        android:layout_width="153dp"
+        android:layout_height="126dp"
+        android:layout_marginBottom="68dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/anh"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="411dp"
+        android:layout_height="518dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <TableLayout
+            android:layout_width="410dp"
+            android:layout_height="513dp"
+            android:background="@drawable/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="149dp"
+                    android:layout_height="205dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/white">
+
+                    <TextView
+                        android:id="@+id/btnHoaDon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Quản lý hóa đơn"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/maunen" />
+
+                    <ImageView
+                        android:id="@+id/maunen"
+                        android:layout_width="141dp"
+                        android:layout_height="144dp"
+                        android:layout_margin="8dp"
+                        app:srcCompat="@drawable/ic_baseline_circle_24"
+                        tools:ignore="MissingConstraints"
+                        tools:layout_editor_absoluteX="0dp"
+                        tools:layout_editor_absoluteY="0dp" />
+
+                    <ImageView
+                        android:id="@+id/HoaDon"
+                        android:layout_width="82dp"
+                        android:layout_height="103dp"
+                        app:layout_constraintBottom_toTopOf="@+id/maunen"
+                        app:layout_constraintEnd_toStartOf="@+id/maunen"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/maunen"
+                        app:layout_constraintTop_toBottomOf="@+id/maunen"
+                        app:srcCompat="@drawable/hoadon" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="149dp"
+                    android:layout_height="205dp"
+                    android:layout_marginLeft="70dp"
+                    android:background="@drawable/white">
+
+                    <TextView
+                        android:id="@+id/btnThongKe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Thống Kê"
+                        android:textColor="@color/black"
+                        android:backgroundTint="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/maunenThongKe" />
+
+                    <ImageView
+                        android:id="@+id/maunenThongKe"
+                        android:layout_width="141dp"
+                        android:layout_height="144dp"
+                        android:layout_margin="8dp"
+                        app:srcCompat="@drawable/ic_baseline_circle_24"
+                        tools:ignore="MissingConstraints"
+                        tools:layout_editor_absoluteX="0dp"
+                        tools:layout_editor_absoluteY="0dp" />
+
+                    <ImageView
+                        android:id="@+id/ThongKe"
+                        android:layout_width="82dp"
+                        android:layout_height="103dp"
+                        app:layout_constraintBottom_toTopOf="@+id/maunenThongKe"
+                        app:layout_constraintEnd_toStartOf="@+id/maunenThongKe"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/maunenThongKe"
+                        app:layout_constraintTop_toBottomOf="@+id/maunenThongKe"
+                        app:srcCompat="@drawable/bieudo" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="92dp"
+                android:layout_marginTop="20dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="149dp"
+                    android:layout_height="205dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/white">
+
+                    <TextView
+                        android:id="@+id/btnSanPham"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Quản lý Sản Phẩm"
+                        android:textColor="@color/black"
+                        android:backgroundTint="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/MauNenSanPham" />
+
+                    <ImageView
+                        android:id="@+id/MauNenSanPham"
+                        android:layout_width="141dp"
+                        android:layout_height="144dp"
+                        android:layout_margin="8dp"
+                        app:srcCompat="@drawable/ic_baseline_circle_24"
+                        tools:ignore="MissingConstraints"
+                        tools:layout_editor_absoluteX="0dp"
+                        tools:layout_editor_absoluteY="0dp" />
+
+                    <ImageView
+                        android:id="@+id/SanPham"
+                        android:layout_width="82dp"
+                        android:layout_height="103dp"
+                        app:layout_constraintBottom_toTopOf="@+id/MauNenSanPham"
+                        app:layout_constraintEnd_toStartOf="@+id/MauNenSanPham"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/MauNenSanPham"
+                        app:layout_constraintTop_toBottomOf="@+id/MauNenSanPham"
+                        app:srcCompat="@drawable/sanpham" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="149dp"
+                    android:layout_height="205dp"
+                    android:layout_marginLeft="70dp"
+                    android:background="@drawable/white">
+
+                    <TextView
+                        android:id="@+id/btnExit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Exit"
+                        android:textColor="@color/black"
+                        android:backgroundTint="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/maunenExit" />
+
+                    <ImageView
+                        android:id="@+id/maunenExit"
+                        android:layout_width="141dp"
+                        android:layout_height="144dp"
+                        android:layout_margin="8dp"
+                        app:srcCompat="@drawable/ic_baseline_circle_24"
+                        tools:ignore="MissingConstraints"
+                        tools:layout_editor_absoluteX="0dp"
+                        tools:layout_editor_absoluteY="0dp" />
+
+                    <ImageView
+                        android:id="@+id/Exit"
+                        android:layout_width="82dp"
+                        android:layout_height="103dp"
+                        app:layout_constraintBottom_toTopOf="@+id/maunenExit"
+                        app:layout_constraintEnd_toStartOf="@+id/maunenExit"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/maunenExit"
+                        app:layout_constraintTop_toBottomOf="@+id/maunenExit"
+                        app:srcCompat="@drawable/exit" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </TableRow>
+
+        </TableLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
