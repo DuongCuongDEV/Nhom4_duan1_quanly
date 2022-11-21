@@ -44,31 +44,62 @@ public class MainActivity extends AppCompatActivity {
 
     }
     private void login(){
-        String email, pass;
-        email = txtEmail.getText().toString();
-        pass = txtpass.getText().toString();
 
-        if (TextUtils.isEmpty(email)){
-            Toast.makeText(this, "Vui long nhap email", Toast.LENGTH_SHORT).show();
-            return;
-        }
+        if(validate() > 0) {
+            String email, pass;
+            email = txtEmail.getText().toString();
+            pass = txtpass.getText().toString();
 
-        if (TextUtils.isEmpty(pass)){
-            Toast.makeText(this, "Vui long nhap password", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        mAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if(task.isSuccessful()){
-                    Toast.makeText(getApplicationContext(), "Dang nhap thanh cong", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(MainActivity.this,Home.class));
-                    finish();
-                } else {
-                    Toast.makeText(getApplicationContext(), "Dang nhap khong thanh cong", Toast.LENGTH_SHORT).show();
-                }
+            if (TextUtils.isEmpty(email)){
+                Toast.makeText(this, "Vui long nhap email", Toast.LENGTH_SHORT).show();
+                return;
             }
-        });
+
+            if (TextUtils.isEmpty(pass)){
+                Toast.makeText(this, "Vui long nhap password", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            mAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if(task.isSuccessful()){
+                        Toast.makeText(getApplicationContext(), "Dang nhap thanh cong", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(MainActivity.this,Home.class));
+                        finish();
+                    } else {
+                        Toast.makeText(getApplicationContext(), "Dang nhap khong thanh cong", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+        }
+
+    }
+
+    public int validate() {
+        int check = 1;
+        String checkemail = "[a-zA-Z0-9]+(?:\\.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+(?:\\.[a-zA-Z0-9]+)";
+        if (txtEmail.getText().length() == 0) {
+//            dialog.dismiss();
+            Toast.makeText(MainActivity.this, "Email không được để trống.",
+                    Toast.LENGTH_LONG).show();
+            return check - 1;
+        } else if (!txtEmail.getText().toString().matches(checkemail)) {
+//            dialog.dismiss();
+            Toast.makeText(MainActivity.this, "Email không đúng định dạng.",
+                    Toast.LENGTH_LONG).show();
+            return check - 1;
+        } else if (txtpass.getText().length() == 0) {
+//            dialog.dismiss();
+            Toast.makeText(MainActivity.this, "Mật khẩu không được để trống.",
+                    Toast.LENGTH_LONG).show();
+            return check - 1;
+        } else if (txtpass.getText().length() < 6) {
+//            dialog.dismiss();
+            Toast.makeText(MainActivity.this, "Mật khẩu phải lớn hơn 6 kí tự.",
+                    Toast.LENGTH_LONG).show();
+            return check - 1;
+        }
+        return check;
     }
 }
